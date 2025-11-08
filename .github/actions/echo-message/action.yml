@@ -1,0 +1,14 @@
+name: "Echo Message"
+description: "Print a message passed as input"
+
+inputs:
+  message:
+    description: "Message to echo"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Echo message
+      shell: bash
+      run: echo "--> ${{ inputs.message }}"
